@@ -1,1 +1,4 @@
-<p>home works!</p>
+<div *ngFor="let pokemon of listaPokemons; i of index">
+{{pokemon.name}}
+<img [src]="getPokemonImageUrl(pokemon.id)" alt="{{ pokemon.name }}">
+</div>
