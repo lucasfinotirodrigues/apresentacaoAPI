@@ -1,0 +1,67 @@
+/*Estilização da imagem de fundo do site como um todo*/
+.structure{
+  background-image: url(../../assets/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%
+}
+
+/*Estilização dos itens do card*/
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-image{
+  width: 160px;
+  margin: 0 auto;
+}
+
+.card{
+  width: 220px;
+  height: 280px;
+}
+
+.card-title{
+  text-transform: capitalize;
+  font-size: 26px;
+}
+
+.pokedex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 300px;
+}
+
+@media only screen and (max-width: 520px) {
+  .pokedex{
+    padding: 0;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .card {
+    width: 280px;
+    height: 340px;
+  }
+
+  .card-image{
+    width: 240px;
+  }
+
+  .card-title {
+    font-size: 32px;
+  }
+
+}
