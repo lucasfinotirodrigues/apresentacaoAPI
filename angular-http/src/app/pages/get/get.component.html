@@ -1,0 +1,14 @@
+<div>
+  <button (click)="trazer()"></button>
+  <p>Total de pacotes do Angular: {{ totalPacotesAngular }}</p>
+
+  <h3>Resultados obtidos:</h3>
+  <ul>
+    <li *ngFor="let pacote of resultadosMapeados">
+      <strong>Nome:</strong> {{ pacote.name }}<br>
+      <strong>Versão:</strong> {{ pacote.version }}<br>
+      <strong>Scope:</strong>{{pacote.scope}}<br>
+      <strong>Descrição:</strong> {{ pacote.description }}
+    </li>
+  </ul>
+</div>

@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { PostComponent } from './pages/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
+import { GetComponent } from './pages/get/get.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    GetComponent
   ],
   imports: [
     BrowserModule,
