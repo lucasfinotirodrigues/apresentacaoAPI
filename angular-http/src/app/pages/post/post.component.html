@@ -1,27 +1,36 @@
 <h3>POST</h3>
 
-<form (ngSubmit)="onSubmit()">
-  <div>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" [(ngModel)]="nome" name="nome" required>
+
+
+<div style="display: flex; flex-direction: column; margin-top: 20px;">
+
+</div>
+
+<div class="conteudo d-flex flex-column">
+  <div class="form-login">
+    <form class="d-flex align-items-center flex-column gap-3" name="form" role="form" (ngSubmit)="onSubmit()">
+      <h2>Cadastre-se</h2>
+      <div class="form-group d-flex flex-column gap-2">
+        <label for="nome">Nome</label>
+        <input class="form-control" type="text" id="nome" [(ngModel)]="nome" name="nome" required>
+      </div>
+      <div class="form-groups d-flex flex-column gap-2">
+        <label for="curso">Curso</label>
+        <input class="form-control" type="text" id="curso" [(ngModel)]="curso" name="curso" required>
+      </div>
+      <div class="form-groups d-flex flex-column gap-2">
+        <label for="termo">Termo</label>
+        <input class="form-control" type="number" id="termo" [(ngModel)]="termo" name="termo" required>
+      </div>
+      <button
+        class="submit d-flex justify-content-center align-items-center"
+        type="submit"
+        >
+        Enviar
+      </button>
+    </form>
   </div>
-
-  <div>
-    <label for="curso">Curso:</label>
-    <input type="text" id="curso" [(ngModel)]="curso" name="curso" required>
+  <div class="alert alert-success" *ngIf="isPostSuccessful">
+    Foi cadastrado(a) o(a) aluno(a) <strong>{{nome}}</strong>, com o id <strong>{{postId}}</strong>, que está matriculado(a) no <strong>{{termo}}</strong>° Termo, do curso <strong>{{curso}}</strong>
   </div>
-
-  <div>
-    <label for="termo">Termo:</label>
-    <input type="number" id="termo" [(ngModel)]="termo" name="termo" required>
-  </div>
-
-  <button type="submit">Enviar</button>
-</form>
-
-<div *ngIf="isPostSuccessful" style="display: flex; flex-direction: column; margin-top: 20px;">
-  <p>Id aluno => {{postId}}</p>
-  <p>Nome aluno => {{nome}}</p>
-  <p>Curso do aluno => {{curso}}</p>
-  <p>Termo que o aluno está => {{termo}}</p>
 </div>
