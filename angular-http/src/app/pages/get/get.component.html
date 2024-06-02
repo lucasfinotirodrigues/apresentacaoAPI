@@ -1,14 +1,21 @@
-<div>
-  <button (click)="trazer()"></button>
-  <p>Total de pacotes do Angular: {{ totalPacotesAngular }}</p>
-
-  <h3>Resultados obtidos:</h3>
-  <ul>
-    <li *ngFor="let pacote of resultadosMapeados">
-      <strong>Nome:</strong> {{ pacote.name }}<br>
-      <strong>Versão:</strong> {{ pacote.version }}<br>
-      <strong>Scope:</strong>{{pacote.scope}}<br>
-      <strong>Descrição:</strong> {{ pacote.description }}
-    </li>
-  </ul>
+<div class="content-home">
+  <div class="d-flex flex-wrap justify-content-between gap-3 mb-4">
+    <div class="d-flex flex-column gap-2">
+      <h2 class="titulo">Método GET</h2>
+      <h3 class="subtitulo">Clique no botão para fazer o GET na API do Npm</h3>
+    </div>
+    <button
+      class="get d-flex align-items-center justify-content-center mb-5 gap-4"
+      (click)="trazer()"
+      >GET</button>
+  </div>
+  <div class="d-flex flex-wrap justify-content-between gap-3">
+    <div class="card" *ngFor="let pacote of resultadosMapeados">
+      <p>{{pacote.scope | uppercase}}</p>
+      <p>{{ pacote.name }}</p>
+      <p>{{ pacote.version }}</p>
+      <p>{{ pacote.description }}</p>
+    </div>
+  </div>
 </div>
+
