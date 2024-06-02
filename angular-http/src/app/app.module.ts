@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { GetComponent } from './pages/get/get.component';
 import { PutComponent } from './pages/put/put.component';
+import { DeleteComponent } from './pages/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PutComponent } from './pages/put/put.component';
     HomeComponent,
     ListComponent,
     GetComponent,
-    PutComponent
+    PutComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

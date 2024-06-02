@@ -1,0 +1,11 @@
+<div>
+  <h2>Deletar Post</h2>
+  <div>
+    <label for="postId">ID do Post:</label>
+    <input id="postId" #postIdInput type="number" />
+  </div>
+  <button (click)="deletePost(postIdInput.value)">Deletar</button>
+  <div *ngIf="status">
+    <p>{{ status }}</p>
+  </div>
+</div>

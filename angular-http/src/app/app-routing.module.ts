@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { GetComponent } from './pages/get/get.component';
 import { PutComponent } from './pages/put/put.component';
+import { DeleteComponent } from './pages/delete/delete.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path: 'list/put', component: PutComponent
+  },
+  {
+    path: 'list/delete', component: DeleteComponent
   }
 ];
 
