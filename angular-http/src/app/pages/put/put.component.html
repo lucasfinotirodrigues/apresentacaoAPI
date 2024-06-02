@@ -1,11 +1,28 @@
-<div>
-  <h2>Atualizar Post</h2>
-  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-    <div>
-      <h2>Post Id => {{postId}}</h2>
-      <label for="title">Título:</label>
-      <input id="title" formControlName="title" />
-    </div>
-    <button type="submit">Atualizar</button>
-  </form>
+<div class="conteudo d-flex flex-column">
+  <div class="form-login">
+    <form
+      class="d-flex align-items-center justify-content-between flex-column gap-3"
+      name="form"
+      role="form"
+      [formGroup]="postForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <h2>PUT</h2>
+      <div class="d-flex flex-column gap-2">
+        <div class="form-group d-flex flex-column mt-3 gap-2">
+          <label for="title">Título</label>
+          <input class="form-control" id="title" formControlName="title" />
+        </div>
+        <button
+          class="submit d-flex justify-content-center align-items-center"
+          type="submit"
+          >
+          Atualizar
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="alert alert-success" *ngIf="status">
+    <p>{{ status }}</p>
+  </div>
 </div>

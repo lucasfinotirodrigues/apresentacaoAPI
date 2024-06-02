@@ -19,6 +19,7 @@ export class PutComponent implements OnInit {
       title: ['Título padrão']
     });
   }
+  status: string | undefined;
 
   ngOnInit(): void {}
 
@@ -29,10 +30,12 @@ export class PutComponent implements OnInit {
     this.dataService.updatePost(postIdToUpdate, updatedData)
       .subscribe(
         data => {
+          this.status = ' Foi alterado com sucesso!',
           console.log('Requisição PUT bem-sucedida', data);
           this.postId = data.id;
         },
         error => {
+          this.status = `Erro ao atualizar`
           console.error('Erro ao realizar a requisição PUT', error);
         }
       );
