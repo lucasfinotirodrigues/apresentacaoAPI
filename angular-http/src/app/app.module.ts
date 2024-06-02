@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostComponent } from './pages/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { GetComponent } from './pages/get/get.component';
+import { PutComponent } from './pages/put/put.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,13 @@ import { GetComponent } from './pages/get/get.component';
     PostComponent,
     HomeComponent,
     ListComponent,
-    GetComponent
+    GetComponent,
+    PutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule
   ],

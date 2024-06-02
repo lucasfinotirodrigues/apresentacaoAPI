@@ -4,6 +4,7 @@ import { PostComponent } from './pages/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { GetComponent } from './pages/get/get.component';
+import { PutComponent } from './pages/put/put.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,9 @@ const routes: Routes = [
   {
     path: 'list/post', component: PostComponent
   },
-
+  {
+    path: 'list/put', component: PutComponent
+  }
 ];
 
 @NgModule({

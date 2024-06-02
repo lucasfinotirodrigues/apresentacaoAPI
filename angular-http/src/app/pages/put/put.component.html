@@ -1,0 +1,11 @@
+<div>
+  <h2>Atualizar Post</h2>
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h2>Post Id => {{postId}}</h2>
+      <label for="title">Título:</label>
+      <input id="title" formControlName="title" />
+    </div>
+    <button type="submit">Atualizar</button>
+  </form>
+</div>
