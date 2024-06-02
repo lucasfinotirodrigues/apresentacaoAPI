@@ -1,11 +1,19 @@
-<div>
-  <h2>Deletar Post</h2>
-  <div>
-    <label for="postId">ID do Post:</label>
-    <input id="postId" #postIdInput type="number" />
+<div class="conteudo d-flex flex-column">
+  <div class="form-login">
+    <h2>DELETE</h2>
+    <div class="d-flex flex-column gap-2">
+      <div class="form-group d-flex flex-column mt-3 gap-2">
+        <label for="postId">ID do Post</label>
+        <input class="form-control"id="postId" #postIdInput type="number"/>
+      </div>
+      <button
+        class="submit d-flex justify-content-center align-items-center"
+        (click)="deletePost(postIdInput.value)">
+        Deletar
+      </button>
+    </div>
   </div>
-  <button (click)="deletePost(postIdInput.value)">Deletar</button>
-  <div *ngIf="status">
+  <div class="alert alert-success" *ngIf="status">
     <p>{{ status }}</p>
   </div>
 </div>
